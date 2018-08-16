@@ -1,0 +1,66 @@
+<div class="row">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="jumbotron text-center">
+			<h2>
+				You've got <span class="label label-info">{{(todos |
+						filter:{completed:false}).length }}</span> things to do.
+			</h2>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6 col-md-offset-3 text-center">
+		<form role="form" name="createForm"
+			  data-ng-submit="createForm.$valid && createTodo()">
+			<div class="form-group">
+				<div class="input-group">
+					<input type="text" class="form-control"
+						   data-ng-model="newTodo.title" placeholder="Add todo.." required />
+
+					<span class="input-group-btn" style="background-color: #fff;">
+							<button type="submit" class="btn btn-info">Add</button>
+						</span>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+
+
+<div class="row" data-ng-show="todos.length>0">
+	<div class="col-md-6 col-md-offset-3">
+		<div class="row" data-ng-repeat="todo in todos">
+			<div data-ng-show="editedTodo !== todo">
+				<div class="card border border-primary" style="width:100%;">
+					<div class="card-body" style="margin:10px;">
+						<input type="checkbox" data-ng-model="todo.completed" data-ng-click="saveTodo(todo)" />
+						<h5 class="card-title">{{todo.title}}</h5>
+						<i>Created:<a href="#" class="card-link card-subtitle mb-2 text-muted">{{todo.createdOn | date:'yyyy-MM-dd hh:mm'}}</a>
+						Updated:<a href="#" class="card-link card-subtitle mb-2 text-muted">{{todo.updatedOn | date:'yyyy-MM-dd hh:mm'}}</a></i>
+						<br><br>
+						<a href="#" class="btn btn-info" data-ng-click="editTodo(todo)">edit</a>
+						<a href="#" class="btn btn-danger" data-ng-click="deleteTodo(todo)">delete</a><hr>
+					</div>
+				</div>
+
+			</div>
+
+			<div data-ng-show="editedTodo === todo" class="col-xs-12">
+				<form role="form" name="editForm"
+					  data-ng-submit="editForm.$valid && saveTodo(todo)">
+					<div class="input-group">
+							<span class="input-group-addon"> <input type="checkbox"
+																	data-ng-model="todo.completed" />
+							</span> <input type="text" class="form-control"
+										   data-ng-model="todo.title" required /> <span
+							class="input-group-btn">
+								<button type="submit" class="btn btn-info">Edit</button>
+							</span>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

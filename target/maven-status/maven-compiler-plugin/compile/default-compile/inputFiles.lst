@@ -1,0 +1,15 @@
+/home/dexter/final/spring-todo/src/main/java/todo/controllers/TodoController.java
+/home/dexter/final/spring-todo/src/main/java/todo/repositories/UserRepository.java
+/home/dexter/final/spring-todo/src/main/java/todo/configuration/TodoSecurityConfiguration.java
+/home/dexter/final/spring-todo/src/main/java/todo/configuration/RESTAuthenticationSuccessHandler.java
+/home/dexter/final/spring-todo/src/main/java/todo/services/CustomUserDetailsService.java
+/home/dexter/final/spring-todo/src/main/java/todo/model/Todo.java
+/home/dexter/final/spring-todo/src/main/java/todo/dto/TodoDTO.java
+/home/dexter/final/spring-todo/src/main/java/todo/controllers/UserController.java
+/home/dexter/final/spring-todo/src/main/java/todo/TodoApplication.java
+/home/dexter/final/spring-todo/src/main/java/todo/repositories/TodoRepository.java
+/home/dexter/final/spring-todo/src/main/java/todo/configuration/RESTAccessDeniedHandler.java
+/home/dexter/final/spring-todo/src/main/java/todo/configuration/CSRFHeaderFilter.java
+/home/dexter/final/spring-todo/src/main/java/todo/model/User.java
+/home/dexter/final/spring-todo/src/main/java/todo/dto/UserDTO.java
+/home/dexter/final/spring-todo/src/main/java/todo/configuration/RESTAuthenticationEntryPoint.java
